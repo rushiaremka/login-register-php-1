@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes container {
+    0%{
+        background: white;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 450px;
+    flex-direction: column;
+    background: #0e0e0e70;
+    padding: 0 20px 20px 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #0e0e0e;
+    overflow: hidden;
+    position: relative;
+    animation: container 0.5s ease;
+}
+
+@keyframes transpageatas {
+    0% {
+        background: #0e0e0e70;
+        transform: translateX(-400px);
+    }
+    100% {
+        background: white;
+        transform: translateX(0);
+    }
+}
+
+@keyframes transpagebawah {
+    0% {
+        background: #0e0e0e70;
+        transform: translateX(400px);
+    }
+    100% {
+        background: white;
+        transform: translateX(0);
+    }
+}
+
+.container span.atas{
+    width: 350px;
+    height: 350px;
+    border-radius: 170px;
+    background: white;
+    position: absolute;
+    top: -150px;
+    right: -60px;
+    z-index: 111;
+    animation: transpageatas 0.5s ease;
+}
+
+.container span.bawah{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    background: white;
+    position: absolute;
+    bottom: -100px;
+    left: -130px;
+    z-index: 111;
+    animation: transpagebawah 0.5s ease;
+}
+
+h1 {
+    margin: 0 0 50px 0;
+    font-size: 2em;
+    z-index: 999;
+    animation: transisi 0.5s ease;
+}
+
+.container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    z-index: 999;
+}
+
+.container form .username, .container form .password, .container form .email{
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0;
+}
+
+@keyframes transisi {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container form .username{
+    animation: transisi 0.5s ease;
+}
+
+.container form .email{
+    animation: transisi 0.7s ease;
+}
+
+.container form .password{
+    animation: transisi 1s ease;
+}
+
+
+.container form input {
+    width: 100%;
+    height: auto;
+    background: #c0c0c0;
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+}
+
+.container form input:hover{
+    box-shadow: 0 1px 3px #0e0e0e;
+}
+
+.container form button{
+    background: #0e0e0e;
+    width: 30%;
+    height: auto;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    margin: 20px 0 0 0;
+    color: white;
+    cursor: pointer;
+    animation: transisi 0.5s ease;
+}
+
+p, a{
+    animation: transisi 0.5s ease;
+}
